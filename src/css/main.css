@@ -83,6 +83,68 @@ a {
   outline: 2px solid #b2976c;
 }
 
+.cta {
+  background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url("../../src/img/hero-bg.webp");
+  background-size: cover;
+  background-position: center;
+  text-align: center;
+}
+.cta__heading {
+  color: #fff;
+  font-size: 2.5rem;
+  margin-bottom: 2rem;
+  text-align: center;
+}
+.cta__heading::after {
+  background-color: #b2976c;
+  margin: 0.5rem auto 0;
+  display: block;
+  content: "";
+  height: 5px;
+  width: 50px;
+}
+@media (max-width: 576px) {
+  .cta__heading {
+    font-size: 1.8rem;
+  }
+}
+.cta__wrapper {
+  border: 2px solid #b2976c;
+  padding: 3rem 0;
+}
+.cta__container {
+  margin: 3rem 0;
+  align-self: stretch;
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+}
+.cta__title {
+  color: #fff;
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+.cta__desc {
+  color: #fff;
+  text-transform: uppercase;
+  font-size: 500;
+}
+.cta__btn {
+  color: #fff;
+  background-color: #b2976c;
+  text-transform: uppercase;
+  cursor: pointer;
+  padding: 1rem;
+  font-weight: 700;
+  border: 2px solid #b2976c;
+  display: inline-block;
+  margin-top: 1.5rem;
+}
+.cta__btn:hover {
+  background: transparent;
+  color: #b2976c;
+}
+
 .hero {
   color: #fff;
   padding: 0;
