@@ -115,13 +115,15 @@ a {
   color: #fff;
   font-size: 3rem;
   margin-bottom: 1rem;
+  position: relative;
+  max-width: 520px;
 }
 .hero__heading::after {
   background-color: #b2976c;
-  margin-top: 1rem;
   display: block;
+  margin-top: 1rem;
   content: "";
-  width: 200px;
+  width: 100%;
   height: 4px;
 }
 @media (max-width: 1200px) {

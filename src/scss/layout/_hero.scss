@@ -33,14 +33,16 @@
 
         font-size: 3rem;
         margin-bottom: 1rem;
+        position: relative;
+        max-width: 520px;
 
         &::after{
             background-color: $primary-color;
             
-            margin-top: 1rem;
             display: block;
+            margin-top: 1rem;
             content: "";
-            width: 200px;
+            width: 100%;
             height: 4px;
         }
 
