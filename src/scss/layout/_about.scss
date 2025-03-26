@@ -1,0 +1,38 @@
+@use '../abstract/index' as *;
+
+.about{
+    background-image:linear-gradient(rgba(0,0,0,0.8), rgba(0,0,0,0.8)), url('../../src/img/hero-bg.webp');
+    background-size: cover;
+
+    &__heading{
+        color: $white;
+
+        font-size: 2.5rem;
+        margin-bottom: 2rem;
+        text-align: center;
+
+        &::after{
+            background-color: $primary-color;
+
+            margin: 0.5rem auto 0;
+            display: block;
+            content: "";
+            height: 5px;
+            width: 50px;
+        }
+
+        @include rwd(576){ font-size: 1.8rem; }
+
+        span{ color: $primary-color; }
+    }
+
+
+
+    &__text{
+        line-height: 1.7;
+        margin-bottom: 1rem;
+        text-align: justify;
+        // font-weight: bold;
+        color: $white;
+    }
+}

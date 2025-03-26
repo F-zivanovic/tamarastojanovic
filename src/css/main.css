@@ -161,6 +161,39 @@ a {
   color: #b2976c;
 }
 
+.about {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), url("../../src/img/hero-bg.webp");
+  background-size: cover;
+}
+.about__heading {
+  color: #fff;
+  font-size: 2.5rem;
+  margin-bottom: 2rem;
+  text-align: center;
+}
+.about__heading::after {
+  background-color: #b2976c;
+  margin: 0.5rem auto 0;
+  display: block;
+  content: "";
+  height: 5px;
+  width: 50px;
+}
+@media (max-width: 576px) {
+  .about__heading {
+    font-size: 1.8rem;
+  }
+}
+.about__heading span {
+  color: #b2976c;
+}
+.about__text {
+  line-height: 1.7;
+  margin-bottom: 1rem;
+  text-align: justify;
+  color: #fff;
+}
+
 .contact {
   display: flex;
   padding: 0;
