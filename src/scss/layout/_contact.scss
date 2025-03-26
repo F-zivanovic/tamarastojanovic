@@ -1,0 +1,104 @@
+@use '../abstract/index' as *;
+
+.contact{
+    display: flex;
+    padding: 0;
+
+    @include rwd(992){
+        flex-direction: column;
+    }
+
+    &__item{
+        flex: 1;
+        padding: 70px 5%;
+
+        &--info{ background-color: #f5f5f5; }
+
+        &--form{ background-color: $white; }
+    }
+
+    &__heading{
+        font-size: 2.5rem;
+        margin-bottom: 2rem;
+
+        &::after{
+            background-color: $primary-color;
+
+            margin-top: 0.5rem;
+            display: block;
+            content: "";
+            height: 5px;
+            width: 50px;
+        }
+
+        @include rwd(576){ font-size: 1.8rem; }
+    }
+
+    &__link{
+        color: $primary-color;
+
+        font-size: 1.8rem;
+        margin-bottom: 1.5rem;
+        display: block;
+
+        &:hover{ text-decoration: underline;}
+
+        @include rwd(576){ font-size: 1.2rem; }
+    }
+
+    &__social{
+        color: #6c6c6c;
+        margin-bottom: 1rem;
+
+        .fa-solid{
+            color: $primary-color;
+            margin-right: 0.5rem;
+        }
+    }
+
+    &__text{
+        line-height: 1.6;
+        color: #6c6c6c;
+        margin-top: 1.5rem;
+        max-width: 450px;
+    }
+
+    &__form{
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+    }
+
+    &__box{
+        display: flex;
+        gap: 1rem;
+
+        @include rwd(576){ flex-direction: column; }
+    }
+
+    &__input{
+        background-color: #f5f5f5;
+        font-size: 0.9rem;
+        padding: 1.3rem;
+        width: 100%;
+    }
+
+   textarea{ height: 150px; }
+
+    &__btn{
+        background-color: $primary-color;
+        color: $white;
+
+        text-transform: uppercase;
+        cursor: pointer;
+        padding: 1.3rem;
+        font-weight: 700;
+        border: 2px solid $primary-color;
+        transition: 0.4s linear;
+
+        &:hover{
+            background: transparent;
+            color: $primary-color;
+        }
+    }
+}

@@ -10,6 +10,7 @@
   border: none;
   outline: none;
   resize: none;
+  font-family: "Poppins", sans-serif;
 }
 
 body {
@@ -17,11 +18,8 @@ body {
   overflow-x: hidden;
   line-height: 1.4;
   color: $text-color;
-  font-family: "Poppins", sans-serif;
 
-  @include rwd(576) {
-    font-size: 85%;
-  }
+  @include rwd(576) { ont-size: 85%; }
 }
 
 h1,
@@ -30,8 +28,8 @@ h3,
 h4,
 h5,
 h6 {
-  text-transform: capitalize;
-  text-wrap: balance;
+  font-family: "Playfair Display", serif;
+  color: $headings-color;
 }
 
 img {

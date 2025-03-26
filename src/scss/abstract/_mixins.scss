@@ -1,12 +1,6 @@
 @use "./variables.scss" as *;
 
-@mixin flex(
-  $justify: flex-start,
-  $align: stretch,
-  $flow: row nowrap,
-  $gap: 0,
-  $basis: auto
-) {
+@mixin flex($justify: flex-start, $align: stretch, $flow: row nowrap, $gap: 0) {
   display: flex;
   justify-content: $justify;
   align-items: $align;
@@ -14,15 +8,7 @@
   gap: $gap;
 }
 
-@mixin positioning(
-  $position: absolute,
-  $top: auto,
-  $right: auto,
-  $bottom: auto,
-  $left: auto,
-  $width: auto,
-  $height: auto
-) {
+@mixin position($position: absolute, $top: auto, $right: auto, $bottom: auto, $left: auto, $width: auto, $height: auto) {
   position: $position;
   top: $top;
   right: $right;
@@ -31,13 +17,11 @@
   width: $width;
   height: $height;
 
-  @if ($left == 50% and $top == 50%) {
-    transform: translate(-50%, -50%);
-  } @else if($left == 50%) {
-    transform: translateX(-50%);
-  } @else if($top == 50%) {
-    transform: translateY(-50%);
-  }
+  @if ($left == 50% and $top == 50%) { transform: translate(-50%, -50%); } 
+
+  @else if($left == 50%) { transform: translateX(-50%); }
+
+  @else if($top == 50%) { transform: translateY(-50%); }
 }
 
 @mixin rwd($pixels, $type: max) {
