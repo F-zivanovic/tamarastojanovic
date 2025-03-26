@@ -17,25 +17,10 @@
         &--form{ background-color: $white; }
     }
 
-    &__heading{
-        font-size: 2.5rem;
-        margin-bottom: 2rem;
-
-        &::after{
-            background-color: $primary-color;
-
-            margin-top: 0.5rem;
-            display: block;
-            content: "";
-            height: 5px;
-            width: 50px;
-        }
-
-        @include rwd(576){ font-size: 1.8rem; }
-    }
+    &__heading{ @include section-title($headings-color, left, 0.5rem 0); }
 
     &__link{
-        color: $primary-color;
+        color: $black;
 
         font-size: 1.8rem;
         margin-bottom: 1.5rem;

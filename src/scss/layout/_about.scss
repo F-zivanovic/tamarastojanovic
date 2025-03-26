@@ -5,25 +5,20 @@
     background-size: cover;
 
     &__heading{
-        color: $white;
-
-        font-size: 2.5rem;
-        margin-bottom: 2rem;
-        text-align: center;
-
-        &::after{
-            background-color: $primary-color;
-
-            margin: 0.5rem auto 0;
-            display: block;
-            content: "";
-            height: 5px;
-            width: 50px;
-        }
-
-        @include rwd(576){ font-size: 1.8rem; }
+        @include section-title;
 
         span{ color: $primary-color; }
+    }
+
+    &__item--img{
+        display: none;
+
+        @include rwd(1200){ display: block; }
+    }
+
+    &__img{
+        width: 300px;
+        height: 500px;
     }
 
     &__text{

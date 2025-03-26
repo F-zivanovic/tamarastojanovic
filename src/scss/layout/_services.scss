@@ -2,23 +2,7 @@
 
 .services{
 
-    &__heading{
-        font-size: 2.5rem;
-        margin-bottom: 2rem;
-        text-align: center;
-
-        &::after{
-            background-color: $primary-color;
-
-            margin: 0.5rem auto 0;
-            display: block;
-            content: "";
-            height: 5px;
-            width: 50px;
-        }
-
-        @include rwd(576){ font-size: 1.8rem; }
-    }
+    &__heading{ @include section-title($headings-color); }
 
     &__wrapper{
         @include flex(space-between, stretch, wrap);
@@ -51,8 +35,6 @@
     }
 
     &__title{   
-        color: $primary-color;
-
         text-transform: uppercase;
         font-weight: 600;
         letter-spacing: 2px;

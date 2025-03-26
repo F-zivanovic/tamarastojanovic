@@ -1,0 +1,55 @@
+@use '../abstract/index' as *;
+
+.cta{
+    background:linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('../../src/img/hero-bg.webp');
+    background-size: cover;
+    background-position: center;
+    text-align: center;
+  
+    &__heading{ @include section-title; }
+  
+    &__wrapper{
+      border: 2px solid $primary-color;
+      padding: 3rem 2rem;
+    }
+  
+    &__container{
+      margin: 3rem 0;
+      align-self: stretch;
+      display: flex;
+      flex-direction: column;
+      gap: 3rem;
+    }
+  
+    &__title{
+      color: $white;
+  
+      font-size: 2rem;
+      margin-bottom: 1rem;
+    }
+  
+    &__desc{
+      color: $white;
+  
+      text-transform: uppercase;
+      font-size: 500;
+    }
+  
+    &__btn{
+      color: $white;
+      background-color: $primary-color;
+      
+      text-transform: uppercase;
+      cursor: pointer;
+      padding: 1rem;
+      font-weight: 700;
+      border: 2px solid $primary-color;
+      display: inline-block;
+      margin-top: 1.5rem;
+  
+      &:hover{
+          background: transparent;
+          color: $primary-color;
+      }
+    }
+  }

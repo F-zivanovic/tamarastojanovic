@@ -35,77 +35,54 @@
   }
 }
 
-.cta{
-  background:linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('../../src/img/hero-bg.webp');
-  background-size: cover;
-  background-position: center;
-  text-align: center;
+.section-title{
+  font-size: 2.5rem;
+  margin-bottom: 2rem;
 
-  &__heading{
-    color: $white;
+  @include rwd(576){ font-size: 1.8rem; }
 
-    font-size: 2.5rem;
-    margin-bottom: 2rem;
-    text-align: center;
-
-    &::after{
-        background-color: $primary-color;
-
-        margin: 0.5rem auto 0;
-        display: block;
-        content: "";
-        height: 5px;
-        width: 50px;
-    }
-
-    @include rwd(576){ font-size: 1.8rem; }
-  }
-
-  &__wrapper{
-    border: 2px solid $primary-color;
-    padding: 3rem 2rem;
-  }
-
-  &__container{
-    margin: 3rem 0;
-    align-self: stretch;
-    display: flex;
-    flex-direction: column;
-    gap: 3rem;
-  }
-
-  &__title{
-    color: $white;
-
-    font-size: 2rem;
-    margin-bottom: 1rem;
-  }
-
-  &__desc{
-    color: $white;
-
-    text-transform: uppercase;
-    font-size: 500;
-  }
-
-  &__btn{
-    color: $white;
+  &::after{
     background-color: $primary-color;
-    
-    text-transform: uppercase;
-    cursor: pointer;
-    padding: 1rem;
-    font-weight: 700;
-    border: 2px solid $primary-color;
-    display: inline-block;
-    margin-top: 1.5rem;
 
-    &:hover{
-        background: transparent;
-        color: $primary-color;
-    }
+    display: block;
+    content: "";
+    height: 4px;
+    width: 50px;
   }
 }
+
+.policy{
+  color: $black;
+
+  &__heading{ 
+    font-size: 2rem;
+    margin-bottom: 2rem;
+ }
+
+  &__list{ 
+    list-style-type: circle;
+    padding-left: 2rem;
+    margin-bottom: 1.5rem;
+  }
+
+  &__text{
+    line-height: 1.6;
+
+    &:not(:last-child){
+      margin-bottom: 1.5rem;
+    }
+  }
+
+  &__link{
+    color: $black;
+
+    text-decoration: underline;
+
+    &:hover { color: $primary-color; }
+  }
+}
+
+
 
 
 

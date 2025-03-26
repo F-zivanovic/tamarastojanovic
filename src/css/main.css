@@ -3,7 +3,6 @@
   margin: 0;
   padding: 0;
   scroll-behavior: smooth;
-  list-style-type: none;
   text-decoration: none;
   border: none;
   outline: none;
@@ -47,6 +46,10 @@ a {
   transition: 0.4s linear;
 }
 
+ul {
+  list-style-type: none;
+}
+
 .container {
   width: 70%;
   margin: auto;
@@ -83,66 +86,101 @@ a {
   outline: 2px solid #b2976c;
 }
 
-.cta {
-  background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url("../../src/img/hero-bg.webp");
-  background-size: cover;
-  background-position: center;
-  text-align: center;
-}
-.cta__heading {
-  color: #fff;
+.section-title {
   font-size: 2.5rem;
   margin-bottom: 2rem;
-  text-align: center;
-}
-.cta__heading::after {
-  background-color: #b2976c;
-  margin: 0.5rem auto 0;
-  display: block;
-  content: "";
-  height: 5px;
-  width: 50px;
 }
 @media (max-width: 576px) {
-  .cta__heading {
+  .section-title {
     font-size: 1.8rem;
   }
 }
-.cta__wrapper {
-  border: 2px solid #b2976c;
-  padding: 3rem 2rem;
-}
-.cta__container {
-  margin: 3rem 0;
-  align-self: stretch;
-  display: flex;
-  flex-direction: column;
-  gap: 3rem;
-}
-.cta__title {
-  color: #fff;
-  font-size: 2rem;
-  margin-bottom: 1rem;
-}
-.cta__desc {
-  color: #fff;
-  text-transform: uppercase;
-  font-size: 500;
-}
-.cta__btn {
-  color: #fff;
+.section-title::after {
   background-color: #b2976c;
-  text-transform: uppercase;
-  cursor: pointer;
-  padding: 1rem;
-  font-weight: 700;
-  border: 2px solid #b2976c;
-  display: inline-block;
-  margin-top: 1.5rem;
+  display: block;
+  content: "";
+  height: 4px;
+  width: 50px;
 }
-.cta__btn:hover {
-  background: transparent;
+
+.policy {
+  color: #000;
+}
+.policy__heading {
+  font-size: 2rem;
+  margin-bottom: 2rem;
+}
+.policy__list {
+  list-style-type: circle;
+  padding-left: 2rem;
+  margin-bottom: 1.5rem;
+}
+.policy__text {
+  line-height: 1.6;
+}
+.policy__text:not(:last-child) {
+  margin-bottom: 1.5rem;
+}
+.policy__link {
+  color: #000;
+  text-decoration: underline;
+}
+.policy__link:hover {
   color: #b2976c;
+}
+
+.nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-flow: row nowrap;
+  gap: 0;
+  background-color: #1d1d1d;
+  padding: 1rem 10%;
+}
+.nav__logo {
+  color: #b2976c;
+  text-transform: uppercase;
+  font-size: 3rem;
+}
+.nav__list {
+  display: flex;
+  gap: 1rem;
+}
+@media (max-width: 992px) {
+  .nav__list {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.85);
+    z-index: 999;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    transform: translateX(-100%);
+    transition: 0.4s linear;
+  }
+}
+.nav__list.active {
+  transform: translateX(0);
+}
+.nav__link {
+  color: #fff;
+}
+.nav__link:hover {
+  color: #b2976c;
+}
+.nav .fa-solid {
+  display: none;
+  font-size: 2rem;
+  cursor: pointer;
+}
+@media (max-width: 992px) {
+  .nav .fa-solid {
+    display: block;
+  }
 }
 
 .hero {
@@ -232,25 +270,25 @@ a {
 }
 .about__heading {
   color: #fff;
-  font-size: 2.5rem;
-  margin-bottom: 2rem;
   text-align: center;
 }
 .about__heading::after {
-  background-color: #b2976c;
   margin: 0.5rem auto 0;
-  display: block;
-  content: "";
-  height: 5px;
-  width: 50px;
-}
-@media (max-width: 576px) {
-  .about__heading {
-    font-size: 1.8rem;
-  }
 }
 .about__heading span {
   color: #b2976c;
+}
+.about__item--img {
+  display: none;
+}
+@media (max-width: 1200px) {
+  .about__item--img {
+    display: block;
+  }
+}
+.about__img {
+  width: 300px;
+  height: 500px;
 }
 .about__text {
   color: #fff;
@@ -259,22 +297,11 @@ a {
 }
 
 .services__heading {
-  font-size: 2.5rem;
-  margin-bottom: 2rem;
+  color: #272727;
   text-align: center;
 }
 .services__heading::after {
-  background-color: #b2976c;
   margin: 0.5rem auto 0;
-  display: block;
-  content: "";
-  height: 5px;
-  width: 50px;
-}
-@media (max-width: 576px) {
-  .services__heading {
-    font-size: 1.8rem;
-  }
 }
 .services__wrapper {
   display: flex;
@@ -322,7 +349,6 @@ a {
   }
 }
 .services__title {
-  color: #b2976c;
   text-transform: uppercase;
   font-weight: 600;
   letter-spacing: 2px;
@@ -346,6 +372,56 @@ a {
   color: #b2976c;
 }
 
+.cta {
+  background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url("../../src/img/hero-bg.webp");
+  background-size: cover;
+  background-position: center;
+  text-align: center;
+}
+.cta__heading {
+  color: #fff;
+  text-align: center;
+}
+.cta__heading::after {
+  margin: 0.5rem auto 0;
+}
+.cta__wrapper {
+  border: 2px solid #b2976c;
+  padding: 3rem 2rem;
+}
+.cta__container {
+  margin: 3rem 0;
+  align-self: stretch;
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+}
+.cta__title {
+  color: #fff;
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+.cta__desc {
+  color: #fff;
+  text-transform: uppercase;
+  font-size: 500;
+}
+.cta__btn {
+  color: #fff;
+  background-color: #b2976c;
+  text-transform: uppercase;
+  cursor: pointer;
+  padding: 1rem;
+  font-weight: 700;
+  border: 2px solid #b2976c;
+  display: inline-block;
+  margin-top: 1.5rem;
+}
+.cta__btn:hover {
+  background: transparent;
+  color: #b2976c;
+}
+
 .contact {
   display: flex;
   padding: 0;
@@ -366,24 +442,14 @@ a {
   background-color: #fff;
 }
 .contact__heading {
-  font-size: 2.5rem;
-  margin-bottom: 2rem;
+  color: #272727;
+  text-align: left;
 }
 .contact__heading::after {
-  background-color: #b2976c;
-  margin-top: 0.5rem;
-  display: block;
-  content: "";
-  height: 5px;
-  width: 50px;
-}
-@media (max-width: 576px) {
-  .contact__heading {
-    font-size: 1.8rem;
-  }
+  margin: 0.5rem 0;
 }
 .contact__link {
-  color: #b2976c;
+  color: #000;
   font-size: 1.8rem;
   margin-bottom: 1.5rem;
   display: block;
