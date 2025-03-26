@@ -1,0 +1,58 @@
+@use '../abstract/index' as *;
+
+.footer{
+    color: $white;
+
+    padding: 70px 0 0;
+    background-color: #1d1d1d;
+
+    &__wrapper{
+        display: flex;
+        justify-content: space-between;
+        padding-bottom: 2rem;
+        row-gap: 2rem;
+
+        @include rwd(1200){ flex-direction: column; }
+    }
+
+    &__item{ flex: 0 0 22%; }
+
+    &__heading{
+        color: $white;
+
+        margin-bottom: 1.8rem;
+        font-size: 1.5rem;
+
+        &::after{
+            background-color: $primary-color;
+
+            margin: 0.5rem 0;
+            display: block;
+            content: "";
+            height: 5px;
+            width: 50px;
+        }
+    }
+
+    &__list{
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+
+        .fa-solid,
+        .fa-brands{ color: $primary-color; }
+    }
+
+    &__link{
+        color: $white;
+
+        &:hover{ color: $primary-color; }
+
+        &--small{ font-size: 0.7rem; }
+    }
+
+    &__copyright{
+        padding: 1rem 0;
+        border-top: 1px solid $primary-color;
+    }
+}

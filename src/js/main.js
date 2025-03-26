@@ -10,3 +10,6 @@ navigationDots.forEach((dot)=>{
     
     })
 })
+
+
+document.getElementById("year").textContent = new Date().getFullYear();

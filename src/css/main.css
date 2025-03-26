@@ -110,7 +110,7 @@ a {
 }
 .cta__wrapper {
   border: 2px solid #b2976c;
-  padding: 3rem 0;
+  padding: 3rem 2rem;
 }
 .cta__container {
   margin: 3rem 0;
@@ -448,6 +448,61 @@ a {
 .contact__btn:hover {
   background: transparent;
   color: #b2976c;
+}
+
+.footer {
+  color: #fff;
+  padding: 70px 0 0;
+  background-color: #1d1d1d;
+}
+.footer__wrapper {
+  display: flex;
+  justify-content: space-between;
+  padding-bottom: 2rem;
+  row-gap: 2rem;
+}
+@media (max-width: 1200px) {
+  .footer__wrapper {
+    flex-direction: column;
+  }
+}
+.footer__item {
+  flex: 0 0 22%;
+}
+.footer__heading {
+  color: #fff;
+  margin-bottom: 1.8rem;
+  font-size: 1.5rem;
+}
+.footer__heading::after {
+  background-color: #b2976c;
+  margin: 0.5rem 0;
+  display: block;
+  content: "";
+  height: 5px;
+  width: 50px;
+}
+.footer__list {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+.footer__list .fa-solid,
+.footer__list .fa-brands {
+  color: #b2976c;
+}
+.footer__link {
+  color: #fff;
+}
+.footer__link:hover {
+  color: #b2976c;
+}
+.footer__link--small {
+  font-size: 0.7rem;
+}
+.footer__copyright {
+  padding: 1rem 0;
+  border-top: 1px solid #b2976c;
 }
 
 .service {
