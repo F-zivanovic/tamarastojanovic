@@ -49,11 +49,11 @@
     &__social{
         color: #6c6c6c;
         margin-bottom: 1rem;
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
 
-        .fa-solid{
-            color: $primary-color;
-            margin-right: 0.5rem;
-        }
+        .fa-solid{ color: $primary-color; }
     }
 
     &__text{
