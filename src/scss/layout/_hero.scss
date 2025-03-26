@@ -34,8 +34,19 @@
         font-size: 3rem;
         margin-bottom: 1rem;
 
+        &::after{
+            background-color: $primary-color;
+            
+            margin-top: 1rem;
+            display: block;
+            content: "";
+            width: 200px;
+            height: 4px;
+        }
+
         @include rwd(1200){  max-width: 750px;}
         @include rwd(576){ font-size: 2rem; }
+
     }
 
     &__name{

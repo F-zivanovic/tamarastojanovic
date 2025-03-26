@@ -116,6 +116,14 @@ a {
   font-size: 3rem;
   margin-bottom: 1rem;
 }
+.hero__heading::after {
+  background-color: #b2976c;
+  margin-top: 1rem;
+  display: block;
+  content: "";
+  width: 200px;
+  height: 4px;
+}
 @media (max-width: 1200px) {
   .hero__heading {
     max-width: 750px;
