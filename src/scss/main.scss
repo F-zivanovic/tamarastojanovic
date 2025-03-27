@@ -10,6 +10,10 @@
 @use './layout/services';
 @use './layout/cta';
 @use './layout/contact';
-@use 'layout/footer';
+@use './layout/footer';
 
 @use './layout/service';
+
+// Components
+@use './components/arrow-up';
+// @use './components/buttons';

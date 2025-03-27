@@ -1,0 +1,21 @@
+@use '../abstract/index' as *;
+
+.btn{
+    color: $white;
+
+    text-transform: uppercase;
+    cursor: pointer;
+    padding: 1rem;
+    font-weight: 700;
+    transition: 0.4s linear;
+    display: inline-block;
+    border: 2px solid $primary-color;
+
+    &:hover{
+        background: transparent;
+        color: $primary-color;
+    }
+
+    @include rwd(576){ font-size: 0.9rem; }
+}
+

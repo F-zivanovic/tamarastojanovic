@@ -35,21 +35,5 @@
       font-size: 500;
     }
   
-    &__btn{
-      color: $white;
-      background-color: $primary-color;
-      
-      text-transform: uppercase;
-      cursor: pointer;
-      padding: 1rem;
-      font-weight: 700;
-      border: 2px solid $primary-color;
-      display: inline-block;
-      margin-top: 1.5rem;
-  
-      &:hover{
-          background: transparent;
-          color: $primary-color;
-      }
-    }
+    &__btn{ @include btn;}
   }

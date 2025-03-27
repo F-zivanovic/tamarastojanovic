@@ -1,5 +1,6 @@
 @use '../abstract/index' as *;
 
+
 .contact{
     display: flex;
     padding: 0;
@@ -70,20 +71,5 @@
 
    textarea{ height: 150px; }
 
-    &__btn{
-        background-color: $primary-color;
-        color: $white;
-
-        text-transform: uppercase;
-        cursor: pointer;
-        padding: 1.3rem;
-        font-weight: 700;
-        border: 2px solid $primary-color;
-        transition: 0.4s linear;
-
-        &:hover{
-            background: transparent;
-            color: $primary-color;
-        }
-    }
+    &__btn{ @include btn; }
 }

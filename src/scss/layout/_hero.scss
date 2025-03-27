@@ -7,15 +7,15 @@
     display: flex;
     height: 100vh;
 
+    @include rwd(992){ height: 110vh; }
+
     &__item{
         flex: 1;
 
         &--bg{
+            @include flex(flex-start, center);
             background-image:linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('../../src/img/hero-bg.webp');
             background-size: cover;
-            display: flex;
-            align-items: center;
-            justify-content: flex-start;
         }
 
         &--hidden{ @include rwd(1200){ display: none; } }
@@ -62,20 +62,5 @@
     
     &__quote{ font-size: 1.2rem; }
 
-    &__btn{
-        color: $white;
-
-        text-transform: uppercase;
-        cursor: pointer;
-        padding: 1rem;
-        font-weight: 700;
-        border: 2px solid $primary-color;
-        display: inline-block;
-        margin-top: 1.5rem;
-
-        &:hover{
-            background: transparent;
-            color: $primary-color;
-        }
-    }
+    &__btn{ @include btn(transparent) }
 }

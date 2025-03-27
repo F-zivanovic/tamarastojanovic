@@ -40,12 +40,18 @@
             <li><a href="#cta" class="nav__link">Online konsultacije</a></li>
             <li><a href="#blog" class="nav__link">Blog</a></li>
             <li><a href="#contact" class="nav__link">Kontakt</a></li>
+
+            <span class="fa-solid fa-circle-xmark nav__close" id="nav-close"></span>
         </ul>
 
-        <span class="fa-solid fa-bars" id="nav-hamburger"></span>
+        <span class="fa-solid fa-bars nav__hamburger" id="nav-hamburger"></span>
     </nav>
     <!-- Nav section ends -->
 
+
+
+
+    
     <!-- Hero section starts -->
     <section class="hero">
 
@@ -67,7 +73,7 @@
                 <p class="hero__quote">
                     “𝑳𝒆𝒙 𝒆𝒕 𝑰𝒖𝒔𝒕𝒊𝒕𝒊𝒂” 
                 </p>
-                <a href="#contact" class="hero__btn">kontaktirajte nas</a>
+                <a href="#contact" class="hero__btn btn">kontaktirajte nas</a>
             </div>
         </article>
 
@@ -365,7 +371,7 @@
                     <p class="cta__desc">lokacija</p>
                 </div>
             </div>
-            <a href="#" class="cta__btn">izaberi termin</a>
+            <!-- <a href="#" class="cta__btn btn">izaberi termin</a> -->
         </main>
     </section>
     <!-- Cta section ends -->
@@ -418,7 +424,7 @@
 
                 <textarea placeholder="Razlog javljanja" class="contact__input" required></textarea>
 
-                <button type="submit" class="contact__btn">pošalji poruku</button>
+                <button type="submit" class="contact__btn btn">pošalji poruku</button>
             </form>
         </artticle>
         
@@ -598,8 +604,16 @@
 
 
 
+    <!-- Scroll to top -->
+    <i class="arrow__up fa-solid fa-chevron-up" id="arrow-up" aria-hidden="true"></i>
+
+
+
+
+
      <!-- Custom JS -->
-      <script src="src/js/main.js"></script>
+    <script src="src/js/main.js"></script>
+    <script src="src/js/dots.js"></script>
 </body>
 
 </html>

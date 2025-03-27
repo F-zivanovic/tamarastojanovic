@@ -13,12 +13,13 @@
 }
 
 body {
+  color: $text-color;
+
   font-size: 100%;
   overflow-x: hidden;
   line-height: 1.4;
-  color: $text-color;
 
-  @include rwd(576) { ont-size: 85%; }
+  @include rwd(576) { font-size: 85%; }
 }
 
 h1,
@@ -27,8 +28,9 @@ h3,
 h4,
 h5,
 h6 {
-  font-family: "Playfair Display", serif;
   color: $headings-color;
+
+  font-family: "Playfair Display", serif;
 }
 
 img {
@@ -37,10 +39,18 @@ img {
   vertical-align: middle;
 }
 
-section { padding: 70px 0; }
+section { 
+  padding: 70px 0;
+  scroll-margin-top:70px;
+ }
 
 a {
   transition: 0.4s linear;
+
+  &:focus-visible {
+    text-decoration: underline;
+    outline: 1px dashed $primary-color;
+  }
 }
 
 ul { list-style-type: none;}
