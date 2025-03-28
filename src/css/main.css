@@ -616,6 +616,15 @@ ul {
 .service__text--divider {
   margin-top: 1.5rem;
 }
+.service__text--bold {
+  font-weight: 700;
+}
+.service__text--italic {
+  font-style: italic;
+}
+.service__text span {
+  font-weight: 700;
+}
 .service__list {
   margin-bottom: 1.5rem;
   text-align: justify;
@@ -633,11 +642,22 @@ ul {
 .service__list li:not(:last-child) {
   margin-bottom: 1rem;
 }
+.service__list li span {
+  font-weight: 700;
+}
 .service__link {
   color: #000;
 }
 .service__link:hover {
   color: #b2976c;
+}
+.service__link--underline {
+  text-decoration: underline;
+  color: #b2976c;
+}
+.service__btn {
+  background-color: #b2976c;
+  margin-top: 1rem;
 }
 
 .arrow__up {
