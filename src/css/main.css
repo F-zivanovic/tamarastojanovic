@@ -153,12 +153,17 @@ ul {
     width: 100%;
     height: auto;
     z-index: 900;
+    overflow: hidden;
   }
 }
-.nav__logo {
-  color: #b2976c;
-  text-transform: uppercase;
-  font-size: 3rem;
+.nav__img {
+  width: 250px;
+  height: 80px;
+}
+@media (max-width: 576px) {
+  .nav__img {
+    width: 180px;
+  }
 }
 .nav__list {
   display: flex;
@@ -169,7 +174,7 @@ ul {
     position: fixed;
     top: 0;
     right: auto;
-    bottom: auot;
+    bottom: auto;
     left: 0;
     width: 100%;
     height: 100%;
@@ -179,7 +184,7 @@ ul {
     align-items: center;
     justify-content: center;
     transform: translateX(-100%);
-    transition: 0.4s linear;
+    transition: 0.4s transform linear;
   }
 }
 .nav__list.active {
@@ -191,34 +196,21 @@ ul {
 .nav__link:hover {
   color: #b2976c;
 }
-.nav__hamburger {
+.nav__hamburger, .nav__close {
+  color: #b2976c;
   display: none !important;
   font-size: 2rem;
   cursor: pointer;
 }
 @media (max-width: 992px) {
-  .nav__hamburger {
+  .nav__hamburger, .nav__close {
     display: block !important;
   }
 }
 .nav__close {
   position: absolute;
-  top: 10%;
-  right: auto;
-  bottom: auto;
-  left: 50%;
-  width: auto;
-  height: auto;
-  transform: translateX(-50%);
-  color: #b2976c;
-  font-size: 2rem;
-  cursor: pointer;
-  display: none !important;
-}
-@media (max-width: 992px) {
-  .nav__close {
-    display: block !important;
-  }
+  top: 1rem;
+  right: 1rem;
 }
 
 .hero {
@@ -567,6 +559,10 @@ ul {
   flex-direction: column;
   gap: 1rem;
 }
+.footer__list--space li {
+  display: flex;
+  justify-content: space-between;
+}
 .footer__list .fa-solid,
 .footer__list .fa-brands {
   color: #b2976c;
@@ -624,6 +620,9 @@ ul {
   margin-bottom: 1.5rem;
   text-align: justify;
 }
+.service__list--italic {
+  font-style: italic;
+}
 .service__list span {
   font-weight: bold;
 }
@@ -665,6 +664,26 @@ ul {
 }
 .arrow__up.active {
   transform: translateX(0);
+}
+
+.btn {
+  color: #fff;
+  text-transform: uppercase;
+  cursor: pointer;
+  padding: 1rem;
+  font-weight: 700;
+  transition: 0.4s linear;
+  display: inline-block;
+  border: 2px solid #b2976c;
+}
+.btn:hover {
+  background: transparent;
+  color: #b2976c;
+}
+@media (max-width: 576px) {
+  .btn {
+    font-size: 0.9rem;
+  }
 }
 
 /*# sourceMappingURL=main.css.map */

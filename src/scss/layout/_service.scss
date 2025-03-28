@@ -46,6 +46,8 @@
         margin-bottom: 1.5rem;
         text-align: justify;
 
+        &--italic{ font-style: italic; }
+
         span{ font-weight: bold; }
 
         li{

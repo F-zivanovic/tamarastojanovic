@@ -8,28 +8,31 @@
     @include rwd(1200){ 
         @include position(fixed, 0, auto, auto, 0, 100%);
         z-index: 900;
+        overflow: hidden;
     }
 
-    &__logo{ 
-        color: $primary-color;
+    &__img{
+        width: 250px;
+        height: 80px;
 
-        text-transform: uppercase;
-        font-size: 3rem;
+        @include rwd(576){
+            width: 180px;
+        }
     }
-
+     
     &__list{
         display: flex;
         gap: 1rem;
 
         @include rwd(992){
-            @include position(fixed, 0, auto, auot, 0, 100%, 100%);
+            @include position(fixed, 0, auto, auto, 0, 100%, 100%);
             background: rgba(0,0,0,0.85);
             z-index: 999;
             flex-direction: column;
             align-items: center;
             justify-content: center;
             transform: translateX(-100%);
-            transition: 0.4s linear;
+            transition: 0.4s transform linear;
         }
 
         &.active{ transform: translateX(0);}
@@ -41,7 +44,10 @@
         &:hover{ color: $primary-color; }
     }
 
-    &__hamburger{
+    &__hamburger,
+    &__close{
+        color: $primary-color;
+
         display: none !important;
         font-size: 2rem;
         cursor: pointer;
@@ -50,13 +56,8 @@
     }
 
     &__close{
-        @include position(absolute, 10%, auto, auto, 50%);
-        color: $primary-color;
-
-        font-size: 2rem;
-        cursor: pointer;
-        display: none !important;
-
-        @include rwd(992){ display: block !important; }
+        position: absolute;
+        top: 1rem;
+        right: 1rem;
     }
 }
