@@ -3,21 +3,17 @@
 .nav{
     @include flex(space-between, center);
     background-color: #1d1d1d;
-    padding: 1rem 10%;
+    padding: 0.8rem 10%;
 
-    @include rwd(1200){ 
+    @include rwd(992){ 
         @include position(fixed, 0, auto, auto, 0, 100%);
         z-index: 900;
         overflow: hidden;
     }
 
     &__img{
-        width: 250px;
+        width: 180px;
         height: 80px;
-
-        @include rwd(576){
-            width: 180px;
-        }
     }
      
     &__list{

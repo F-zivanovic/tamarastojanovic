@@ -1,30 +1,23 @@
 @use '../abstract/index' as *;
 
 .hero{
+    background-color: $text-color; // placeholder while img loading
     color: $white;
-    
+    @include flex(flex-start, center);
+
+    background-image:linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('../../src/img/hero-bg.webp');
+    background-size: cover;
     padding: 0;
-    display: flex;
     height: 100vh;
 
+    &--sm{
+        justify-content: center;
+        height: 50vh;
+
+        @include rwd(992){ height: 70vh !important; }
+    }
+
     @include rwd(992){ height: 110vh; }
-
-    &__item{
-        flex: 1;
-
-        &--bg{
-            @include flex(flex-start, center);
-            background-image:linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('../../src/img/hero-bg.webp');
-            background-size: cover;
-        }
-
-        &--hidden{ @include rwd(1200){ display: none; } }
-    }
-
-    &__img{
-        height: 100%;
-        width: 100%;
-    }
 
     &__wrapper{ padding: 0 5%; }
 

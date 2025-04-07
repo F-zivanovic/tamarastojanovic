@@ -4,6 +4,8 @@
 @use "./base/base";
 @use "./base/helpers";
 
+
+// Layout
 @use './layout/nav';
 @use './layout/hero';
 @use './layout/about';
@@ -13,6 +15,10 @@
 @use './layout/footer';
 
 @use './layout/service';
+
+// Pages
+@use './pages/blog/blog-grid';
+@use 'pages/blog/blog-post';
 
 // Components
 @use './components/arrow-up';
