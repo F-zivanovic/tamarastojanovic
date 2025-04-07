@@ -1,9 +1,9 @@
 @use '../abstract/index' as *;
 
 .hero{
+    @include flex(flex-start, center);
     background-color: $text-color; // placeholder while img loading
     color: $white;
-    @include flex(flex-start, center);
 
     background-image:linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('../../src/img/hero-bg.webp');
     background-size: cover;
@@ -54,6 +54,4 @@
     }
     
     &__quote{ font-size: 1.2rem; }
-
-    &__btn{ @include btn(transparent) }
 }

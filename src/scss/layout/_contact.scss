@@ -5,9 +5,7 @@
     display: flex;
     padding: 0;
 
-    @include rwd(992){
-        flex-direction: column;
-    }
+    @include rwd(992){ flex-direction: column; }
 
     &__item{
         flex: 1;
@@ -71,5 +69,5 @@
 
    textarea{ height: 150px; }
 
-    &__btn{ @include btn; }
+    &__btn{ color: $headings-color !important;}
 }

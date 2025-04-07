@@ -209,13 +209,13 @@ ul {
 }
 
 .hero {
-  background-color: #c4c4c4;
-  color: #fff;
   display: flex;
   justify-content: flex-start;
   align-items: center;
   flex-flow: row nowrap;
   gap: 0;
+  background-color: #c4c4c4;
+  color: #fff;
   background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url("../../src/img/hero-bg.webp");
   background-size: cover;
   padding: 0;
@@ -275,10 +275,6 @@ ul {
 }
 .hero__quote {
   font-size: 1.2rem;
-}
-.hero__btn {
-  background-color: transparent;
-  margin-top: 1rem;
 }
 
 .about {
@@ -423,10 +419,6 @@ ul {
   text-transform: uppercase;
   font-size: 500;
 }
-.cta__btn {
-  background-color: #b2976c;
-  margin-top: 1rem;
-}
 
 .contact {
   display: flex;
@@ -508,8 +500,7 @@ ul {
   height: 150px;
 }
 .contact__btn {
-  background-color: #b2976c;
-  margin-top: 1rem;
+  color: #272727 !important;
 }
 
 .footer {
@@ -571,14 +562,19 @@ ul {
   border-top: 1px solid #b2976c;
 }
 
-.service {
+.service__heading {
+  text-align: center;
+  font-size: 2.5rem;
+  margin-bottom: 3rem;
+}
+.service__wrapper {
   color: #000;
   display: flex;
   gap: 3rem;
   align-items: flex-start;
 }
 @media (max-width: 992px) {
-  .service {
+  .service__wrapper {
     flex-direction: column;
   }
 }
@@ -635,7 +631,7 @@ ul {
   font-weight: 700;
 }
 .service__link {
-  color: #000;
+  color: #000 !important;
 }
 .service__link:hover {
   color: #b2976c;
@@ -645,8 +641,7 @@ ul {
   color: #b2976c;
 }
 .service__btn {
-  background-color: #b2976c;
-  margin-top: 1rem;
+  color: #000 !important;
 }
 
 .blog-grid {
@@ -776,17 +771,19 @@ ul {
 
 .btn {
   color: #fff;
+  background: transparent;
   text-transform: uppercase;
   cursor: pointer;
   padding: 1rem;
   font-weight: 700;
   transition: 0.4s linear;
   display: inline-block;
+  margin-top: 1rem;
   border: 2px solid #b2976c;
 }
 .btn:hover {
-  background: transparent;
-  color: #b2976c;
+  background-color: #b2976c;
+  color: #fff;
 }
 @media (max-width: 576px) {
   .btn {

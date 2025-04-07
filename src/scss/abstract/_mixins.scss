@@ -36,8 +36,3 @@
 
   &::after{ margin: $margin; }
 }
-
-@mixin btn($bg:$primary-color, $margin:1rem){
-  background-color: $bg;
-  margin-top: $margin;
-}
