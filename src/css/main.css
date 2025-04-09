@@ -136,12 +136,12 @@ ul {
 
 .nav {
   display: flex;
-  justify-content: space-between;
+  justify-content: flex-start;
   align-items: center;
-  flex-flow: row nowrap;
-  gap: 0;
+  flex-flow: column;
+  gap: 1rem;
   background-color: #1d1d1d;
-  padding: 0.8rem 10%;
+  padding: 1rem 10%;
 }
 @media (max-width: 992px) {
   .nav {
@@ -154,6 +154,8 @@ ul {
     height: auto;
     z-index: 900;
     overflow: hidden;
+    flex-direction: row;
+    justify-content: space-between;
   }
 }
 .nav__img {

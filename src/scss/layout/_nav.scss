@@ -1,14 +1,16 @@
 @use '../abstract/index' as *;
 
 .nav{
-    @include flex(space-between, center);
+    @include flex(flex-start, center, column, 1rem);
     background-color: #1d1d1d;
-    padding: 0.8rem 10%;
+    padding: 1rem 10%;
 
     @include rwd(992){ 
         @include position(fixed, 0, auto, auto, 0, 100%);
         z-index: 900;
         overflow: hidden;
+        flex-direction: row;
+        justify-content: space-between;
     }
 
     &__img{
