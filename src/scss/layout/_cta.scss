@@ -1,9 +1,9 @@
 @use '../abstract/index' as *;
 
 .cta{
-    background:linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('../../src/img/hero-bg.webp');
-    background-size: cover;
-    background-position: center;
+    background-color: $primary-color; // placeholder while img loading
+    background:linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), 
+               url('../../src/img/advokat-leskovac.webp') center/cover;
     text-align: center;
   
     &__heading{ @include section-title; }

@@ -5,14 +5,15 @@
     background-color: $text-color; // placeholder while img loading
     color: $white;
 
-    background-image:linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('../../src/img/hero-bg.webp');
-    background-size: cover;
+    background:linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), 
+               url('../../src/img/advokat-leskovac.webp') center/cover;
     padding: 0;
     height: 100vh;
 
     &--sm{
         justify-content: center;
         height: 50vh;
+        padding: 0 5%;
 
         @include rwd(992){ height: 70vh !important; }
     }
